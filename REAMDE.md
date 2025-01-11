@@ -32,11 +32,13 @@ Make sure you have an area of light that is uniform and that no external light i
 4.	Let the sensors record for three periods of on/off. If the light intensity changes in a cycle.  At least 3 of these cycles must be measured.
 5.	Export this data into an CSV
 
-### Create the calibration
-
+### Create the calibration?
+An easy way to align two sensors is to use a function to translate values from one to another, in a for of y = ax + b, or higher order function.
+There are two examples given in `fit_sensors.ipynb`, rediduals and the RMSE can be used to check the fit.
 
 ## How Do I Apply this Calibration?
 When exporting data from the sensors this data is raw, and must be transformed to be compared to other sensors. Transform each data to calibrated by multiplying the value from the sensor by a and adding b. The data can now be compared to each other.
+See `apply_correction.ipynb` for an example.
 
 ## Can we improve this?
 Of course we can. 
